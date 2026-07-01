@@ -62,6 +62,13 @@ The first phase defines the platform, boundaries, capability packs, and minimum
 delivery path. Studio, Connect, and Apps can become separate product surfaces as
 real hospital scenarios mature.
 
+The repository boundary is intentionally thin in this phase. The machine-readable
+boundary is [`contracts/opl-health-platform-boundary.json`](contracts/opl-health-platform-boundary.json):
+Health owns medical product requirements, capability packs, review policy, and
+deployment models; it consumes OPL Cloud / App / Framework refs and receipts
+without owning runtime, resource scheduling, billing, model access, evidence
+storage, release currentness, or clinical decision authority.
+
 <p align="center">
   <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform overview" width="100%" />
 </p>
