@@ -49,11 +49,10 @@ OPL Health Platform 是 OPL 面向医疗行业的产品线入口。
 
 第一阶段先建设 **OPL Health Platform** 的总体规划、能力边界和最小可落地路径。Studio、Connect 和 Apps 可以随着真实场景逐步产品化。
 
-当前阶段的仓库边界保持极薄。机器可读边界见
-[`contracts/opl-health-platform-boundary.json`](contracts/opl-health-platform-boundary.json)：
-Health 负责医疗产品需求、能力包、审查策略和部署模型；它只消费
-OPL Cloud / App / Framework 的引用和回执，不接管运行时、资源调度、账单、
-模型接入、证据存储、发布 currentness 或临床决策 authority。
+当前阶段的仓库边界保持极薄，只落在人读产品和架构文档中。Health 负责医疗产品需求、
+能力包、审查策略和部署模型；它只消费 OPL Cloud / App / Framework 的引用和回执，
+不接管运行时、资源调度、账单、模型接入、证据存储、发布 currentness 或临床决策
+authority。机器可读合同应等试点形成重复结构后再抽取。
 
 <p align="center">
   <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform 产品关系图" width="100%" />

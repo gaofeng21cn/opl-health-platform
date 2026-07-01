@@ -4,10 +4,10 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 
 这份文档归 OPL Health Platform 所有，用来说明医疗产品如何使用 Cloud 能力。OPL Cloud 只需要提供通用工作空间、管理、模型接入、资源、证据和智能体生命周期能力。
 
-本仓只记录 Health 对这些能力的产品化需求和引用关系。边界以
-`contracts/opl-health-platform-boundary.json` 为准：Workspace、Console、
-Gateway、Fabric、Ledger 和 Agent Registry 的运行真相、调度、账单、模型路由、
-证据存储和 owner receipt 不在本仓生成。
+本仓只记录 Health 对这些能力的产品化需求和引用关系。当前边界只落在人读产品和架构
+文档中：Workspace、Console、Gateway、Fabric、Ledger 和 Agent Registry 的运行真相、
+调度、账单、模型路由、证据存储和 owner receipt 不在本仓生成。机器可读合同应等试点形成
+重复结构后再抽取。
 
 ## 能力映射
 
