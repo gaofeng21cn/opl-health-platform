@@ -17,6 +17,7 @@
 
 目标：选择一个明确医疗场景，跑通从能力包到工作空间交付的路径。
 
+- 下一步产物是一个专病 MVP 试点文档，而不是合同、服务代码或运行实现。
 - 选择一个专病、科研或质控场景。
 - 建立最小 OPL Health Knowledge 和 OPL Health Protocol。
 - 建立必要的 OPL Health Tools 和 OPL Health Review 清单。

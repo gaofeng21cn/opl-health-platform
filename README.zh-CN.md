@@ -54,6 +54,17 @@ OPL Health Platform 是 OPL 面向医疗行业的产品线入口。
 不接管运行时、资源调度、账单、模型接入、证据存储、发布 currentness 或临床决策
 authority。机器可读合同应等试点形成重复结构后再抽取。
 
+## 公开角色与 MVP 边界
+
+本仓库是 OPL Health Platform 的医疗行业层规划面。当前阶段保持 docs-only、
+MVP-first：只定义医疗产品定位、能力包、医院部署模型、审查边界，以及 Health 如何消费
+OPL Cloud / App / Framework 能力。
+
+本阶段不新增合同、服务代码、运行实现、账单归属、临床决策 authority 或
+release/currentness claim。下一步具体产品动作是编写一个专病 MVP 试点文档，明确一个
+专科场景、最小医学知识/临床规则/工具/审查能力包、人工责任边界，以及需要消费的
+Cloud/App/Framework 引用。
+
 <p align="center">
   <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform 产品关系图" width="100%" />
 </p>

@@ -70,6 +70,21 @@ resource scheduling, billing, model access, evidence storage, release
 currentness, or clinical decision authority. Machine-readable contracts should
 wait until repeated pilot structures prove they are needed.
 
+## Public Role And MVP Boundary
+
+This repository is the healthcare industry-layer planning surface for OPL
+Health Platform. The current phase is docs-only and MVP-first: it defines
+medical product positioning, capability packs, hospital deployment models,
+review boundaries, and how Health consumes OPL Cloud / App / Framework
+capabilities.
+
+Do not add contracts, service code, runtime implementation, billing ownership,
+clinical-decision authority, or release/currentness claims here in this phase.
+The next concrete product step is a disease-specific MVP pilot document that
+defines one specialty scenario, minimum knowledge/protocol/tool/review packs,
+human responsibility boundaries, and the Cloud/App/Framework refs it will
+consume.
+
 <p align="center">
   <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform overview" width="100%" />
 </p>
