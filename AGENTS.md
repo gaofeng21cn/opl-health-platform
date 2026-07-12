@@ -21,3 +21,11 @@
 - 技术文档可以说明与 OPL Cloud 的关系，但不要把底层模块当成用户主叙事。
 - 医疗相关能力必须明确知识来源、规则来源、审查边界、责任边界和部署边界。
 - 先写清楚产品边界和最小可落地路径，再规划实现。
+
+<!-- CODEGRAPH_START -->
+## CodeGraph
+
+- 本仓库使用本地 `.codegraph/` 索引；该目录不得纳入 Git。
+- 定义、调用、影响范围和代码路径等结构检索优先使用 CodeGraph；字面文本检索使用 `rg`。
+- 索引缺失或过期时运行 `codegraph init .` 或 `codegraph sync .`。
+<!-- CODEGRAPH_END -->
