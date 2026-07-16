@@ -86,7 +86,7 @@ human responsibility boundaries, and the Cloud/App/Framework refs it will
 consume.
 
 <p align="center">
-  <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform overview" width="100%" />
+  <img src="assets/branding/opl-health-platform-overview-v2.png" alt="OPL Health Platform specialty MVP product vision" width="100%" />
 </p>
 
 ## Core Capabilities

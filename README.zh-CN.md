@@ -66,7 +66,7 @@ release/currentness claim。下一步具体产品动作是编写一个专病 MVP
 Cloud/App/Framework 引用。
 
 <p align="center">
-  <img src="assets/branding/opl-health-platform-overview.png" alt="OPL Health Platform 产品关系图" width="100%" />
+  <img src="assets/branding/opl-health-platform-overview-v2.png" alt="OPL Health Platform 专病 MVP 产品愿景" width="100%" />
 </p>
 
 ## 核心能力
