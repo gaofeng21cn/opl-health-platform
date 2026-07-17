@@ -1,5 +1,10 @@
 # OPL Health Knowledge
 
+Owner: `opl-health-platform`
+Purpose: `medical_knowledge_requirements_ssot`
+State: `active_planning`
+Machine boundary: 本文定义医学知识的来源、版本、适用范围和维护要求，不证明知识库已构建、已更新、可检索或通过医学审查。
+
 OPL Health Knowledge 是 OPL Health Platform 的医学知识能力层。
 
 它把指南、共识、教材、文献、医院制度、科室资料和项目材料整理成可引用、可更新、可审查的医学知识包，为医疗智能体提供专业语境和证据基础。

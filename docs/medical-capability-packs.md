@@ -1,61 +1,17 @@
 # 医疗能力包
 
-医疗能力包是 OPL Health Platform 区分于通用 OPL Cloud 的核心。
+Owner: `opl-health-platform`
+Purpose: `medical_capability_owner_index`
+State: `active_index`
+Machine boundary: 本文只导航 Health 人读能力 owner，不定义机器包、安装状态、运行能力或质量结论。
 
-## OPL Health Knowledge：医学知识包
+医疗能力包是 OPL Health Platform 组织医疗产品需求的四类人读 owner。具体内容只在对应文档维护，本页不复制第二份清单。
 
-医学知识包承载可引用、可更新、可审查的医学资料。
+| 能力 | Single Source of Truth | 负责什么 | 不负责什么 |
+| --- | --- | --- | --- |
+| OPL Health Knowledge | [医学知识](./opl-health-knowledge.md) | 来源、版本、适用范围、维护和审查要求 | 文件存储、数据库运行状态、检索 ready |
+| OPL Health Protocol | [临床规则](./opl-health-protocol.md) | 规则依据、输入输出、人工确认和适用边界 | 通用流程引擎、临床决策 authority |
+| OPL Health Tools | [医疗工具](./opl-health-tools.md) | 医疗数据源、院内系统和专业工具的产品需求 | 连接器实现、权限系统、工具运行状态 |
+| 专病模板 | [专病模板体系](./specialty-template-system.md) | 把知识、规则、工具、审查和交付要求组织成场景入口 | 智能体运行时或交付 ready |
 
-典型内容：
-
-- 临床指南和专家共识
-- 教材、综述和高质量文献
-- 医院制度和科室规范
-- 项目资料、研究方案和历史报告
-- 专病知识结构和术语表
-
-每个知识包应记录来源、版本、适用范围、更新时间和负责人。
-
-## OPL Health Protocol：临床规则包
-
-临床规则包承载可执行或可审查的业务规则。
-
-典型内容：
-
-- 临床路径
-- 质控指标
-- 纳入和排除标准
-- 风险分层规则
-- 随访规则
-- 报告审查规则
-
-规则包需要说明适用场景、证据来源、责任边界和人工确认点。
-
-## OPL Health Tools：医疗工具包
-
-医疗工具包承载医疗智能体可以调用的系统、数据源和专业工具。
-
-典型内容：
-
-- HIS、EMR、LIS、PACS 等院内系统接入
-- 文献数据库和指南库
-- 结构化数据库和科研数据集
-- 统计分析、图表、报告和文档工具
-- 科室或医院内部接口
-
-工具包通过 OPL Cloud 的连接和资源能力接入，由医院策略决定可见范围和审批流程。
-
-## 专病模板体系
-
-专病模板把知识、规则、工具和交付格式组织成高频任务入口。
-
-典型模板：
-
-- 专病科研助手
-- 专病质控助手
-- 专病随访助手
-- 病例整理助手
-- 指南匹配助手
-- 科研选题和文献证据助手
-
-模板应明确输入要求、输出格式、审查规则、交付物和继续入口。
+[OPL Health Agents](./opl-health-agents.md) 消费这些能力定义形成医疗智能体产品需求；[OPL Health Review](./opl-health-review.md) 统一持有审查、合规和人工责任边界。OPL Cloud、App、Framework 与领域仓继续持有各自机器合同、运行状态和交付 authority。

@@ -1,5 +1,10 @@
 # 架构总览
 
+Owner: `opl-health-platform`
+Purpose: `health_industry_architecture`
+State: `active_planning`
+Machine boundary: 本文只定义 Health 医疗行业层的人读架构边界，不拥有 Cloud、App、Framework、runtime、deployment 或 release truth。
+
 OPL Health Platform 采用“医疗行业层 + OPL Cloud 通用底座”的结构。
 
 ```text

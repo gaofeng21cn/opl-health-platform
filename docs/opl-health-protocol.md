@@ -1,5 +1,10 @@
 # OPL Health Protocol
 
+Owner: `opl-health-platform`
+Purpose: `clinical_rule_requirements_ssot`
+State: `active_planning`
+Machine boundary: 本文定义临床规则的产品需求、依据和人工确认边界，不拥有规则运行时、临床决策 authority、部署状态或质量 verdict。
+
 OPL Health Protocol 是 OPL Health Platform 的临床规则能力层。
 
 它把临床路径、质控指标、纳入排除标准、风险分层、随访规则和审查要求整理成可复用、可审批、可追踪的规则包。
@@ -35,4 +40,4 @@ OPL Health Protocol 是 OPL Health Platform 的临床规则能力层。
 
 ## 与 OPL Cloud 的关系
 
-规则包作为医疗智能体的能力输入进入 OPL Agent Registry。任务执行时，OPL Workspace 展示规则应用结果，OPL Ledger 记录规则版本、审查结果和继续入口。
+规则包是医疗智能体产品需求的一部分。其可消费引用由对应 package、领域和平台 owner 管理；Workspace 或其他产品面可以展示 owner 提供的结果与引用，Ledger 等证据面可以记录相应回执。Health 不创建第二套 package registry、运行状态或 receipt authority。

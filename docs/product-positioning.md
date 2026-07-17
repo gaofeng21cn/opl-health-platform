@@ -1,5 +1,10 @@
 # 产品定位
 
+Owner: `opl-health-platform`
+Purpose: `product_positioning`
+State: `active_product_definition`
+Machine boundary: 本文定义 OPL Health Platform 的用户、价值和产品边界，不证明任何功能、部署、运行、医疗质量或商业交付已经就绪。
+
 OPL Health Platform 是面向医院的医疗元智能体平台，也是 OPL Health 医疗产品线的主平台。
 
 它为医院提供一套可治理的医疗智能体体系：能够接入医学知识、临床规则、院内工具和部署资源，并为关键任务留下审查和交付记录。

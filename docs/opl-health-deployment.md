@@ -1,5 +1,10 @@
 # OPL Health Deployment
 
+Owner: `opl-health-platform`
+Purpose: `hospital_deployment_planning_ssot`
+State: `active_planning`
+Machine boundary: 本文定义医院部署需求和试点规划，不证明任何环境已部署、可用、安全合规或通过验收。通用基础设施、服务状态和运行证据归对应 OPL Cloud、App、Framework、医院系统及其 owner。
+
 OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 
 它面向医院的信息化、安全、权限、数据和计算资源条件，规划院内私有化、专有云、混合部署和科室试点路径。
@@ -22,6 +27,12 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 - 院内对象存储、文件系统或数据库。
 - Docker、虚拟机、GPU、高性能计算或托管工作节点。
 
+## 医院工作入口
+
+医院管理者和信息化团队通过对应管理面配置组织、权限、资源、能力引用、医疗智能体版本和审查策略。医生与研究者通过工作空间进入获批项目、处理审查反馈并接收交付物。
+
+本文只定义 Health 对这些入口的产品需求；不声明本仓拥有 Console、Workspace、身份权限、资源调度或系统接入实现。
+
 ## 部署记录
 
 每个部署方案应记录：
@@ -34,6 +45,8 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 - 账号、权限和审计要求。
 - 试点场景和验收标准。
 
+每份试点方案还应明确医院 owner、科室 owner、数据责任人、人工审查人、退出条件和不进入本轮的系统范围。
+
 ## 与 OPL Cloud 的关系
 
-OPL Cloud 提供工作空间、管理端、模型接入、资源底座和证据记录。OPL Health Deployment 把这些通用能力映射到医院的实际部署路径。
+OPL Cloud 提供通用工作空间、管理、模型接入、资源和证据能力；OPL Framework 与 App 保留其各自运行和产品 truth。OPL Health Deployment 只把可消费能力映射为医院部署需求，不复制底层实现或 ready 结论。

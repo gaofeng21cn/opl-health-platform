@@ -139,7 +139,7 @@ Powered by OPL Cloud
 ├─ OPL Gateway    model access, keys, routing, usage
 ├─ OPL Workspace  online workspaces and task sessions
 ├─ OPL Console    users, permissions, resources, billing, audit
-├─ OPL Fabric     compute, storage, environments, connectors, agent registry
+├─ OPL Fabric     compute, storage, environments, connectors
 └─ OPL Ledger     job receipts, artifact provenance, review records, continuation refs
 ```
 
@@ -148,26 +148,10 @@ medical industry layer and hospital product experience.
 
 ## Documentation
 
+- [Documentation Index](docs/README.md)
+- [Current Roadmap And Gaps](docs/roadmap.md)
 - [Product Positioning](docs/product-positioning.md)
-- [Target Operating Model](docs/target-operating-model.md)
-- [Architecture](docs/architecture.md)
-- [OPL Cloud Capability Usage](docs/opl-cloud-capability-usage.md)
 - [Scenario Map](docs/scenario-map.md)
-- [Specialty Research Assistant](docs/scenarios/specialty-research-assistant.md)
-- [Specialty Quality Assistant](docs/scenarios/specialty-quality-assistant.md)
-- [Follow-up Assistant](docs/scenarios/follow-up-assistant.md)
-- [Medical Capability Packs](docs/medical-capability-packs.md)
-- [OPL Health Knowledge](docs/opl-health-knowledge.md)
-- [OPL Health Protocol](docs/opl-health-protocol.md)
-- [OPL Health Tools](docs/opl-health-tools.md)
-- [OPL Health Agents](docs/opl-health-agents.md)
-- [OPL Health Review](docs/opl-health-review.md)
-- [OPL Health Deployment](docs/opl-health-deployment.md)
-- [Specialty Template System](docs/specialty-template-system.md)
-- [Medical Agent Lifecycle](docs/medical-agent-lifecycle.md)
-- [Hospital Deployment Models](docs/hospital-deployment-models.md)
-- [Compliance and Responsibility](docs/compliance-and-responsibility.md)
-- [Roadmap](docs/roadmap.md)
 
 ## Current Status
 

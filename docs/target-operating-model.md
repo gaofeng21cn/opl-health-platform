@@ -1,5 +1,10 @@
 # 目标运营模型
 
+Owner: `opl-health-platform`
+Purpose: `hospital_operating_model`
+State: `active_planning`
+Machine boundary: 本文定义目标角色、责任与协作方式，不代表任何医院组织、权限、流程、系统或负责人已完成落地。
+
 OPL Health Platform 的目标是在医院内形成一套可治理的医疗智能体运营体系。
 
 它面向五类角色：医院管理者、科室负责人、医生和研究者、信息化团队、AI 团队。平台价值来自这些角色在同一套能力体系下协作，而不是单个智能体独立工作。

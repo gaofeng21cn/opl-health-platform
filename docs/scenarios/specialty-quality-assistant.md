@@ -1,5 +1,10 @@
 # 专病质控助手
 
+Owner: `opl-health-platform`
+Purpose: `specialty_quality_scenario_reference`
+State: `future_scenario`
+Machine boundary: 本文是第二阶段候选场景参考，不证明指标、数据接入、质控流程、责任 owner 或运行能力已经就绪。
+
 专病质控助手面向科室负责人、质控团队和医院管理团队，帮助他们围绕专病路径、指标和异常情况进行核查、解释和改进。
 
 这是第二阶段更适合推进的场景，因为它需要更明确的数据接入、指标口径和责任边界。

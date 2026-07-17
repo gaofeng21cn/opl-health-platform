@@ -1,5 +1,10 @@
 # OPL Health Tools
 
+Owner: `opl-health-platform`
+Purpose: `medical_tool_requirements_ssot`
+State: `active_planning`
+Machine boundary: 本文定义医疗工具和数据源的产品需求，不证明连接器、权限、院内接口、工具执行或审计能力已经实现。
+
 OPL Health Tools 是 OPL Health Platform 的医疗工具能力层。
 
 它把院内系统、数据库、文献源、分析工具、报告工具和科室接口组织成可授权、可审计、可用于智能体任务的工具包。

@@ -1,8 +1,21 @@
 # OPL Health Review
 
+Owner: `opl-health-platform`
+Purpose: `medical_review_compliance_responsibility_ssot`
+State: `active_planning`
+Machine boundary: 本文定义 Health 医学审查与人工责任要求，不签发医学质量、合规、部署、交付或 owner acceptance 结论。真实记录、运行证据和负责人确认归医院及对应实现面。
+
 OPL Health Review 是 OPL Health Platform 的医学审查与证据能力层。
 
 它为关键任务提供来源、规则、工具、输出、审查和责任记录，帮助医院把医疗智能体结果纳入可复查、可管理、可交接的工作流程。
+
+## 责任与合规边界
+
+- 医疗智能体服务于专业人员工作，不替代医生作出最终医疗决策。
+- 患者级数据遵循医院的数据安全、权限、审计、脱敏和触达策略。
+- 医学知识、临床规则和工具调用需要标明来源、版本、适用范围和负责人。
+- 高风险输出、患者触达、临床处理建议和对外发布结论必须设置人工确认点。
+- 医疗专业判断由医院指定专家、科室或负责人确认；平台记录不能替代该责任。
 
 ## 审查对象
 
@@ -38,4 +51,4 @@ OPL Health Review 是 OPL Health Platform 的医学审查与证据能力层。
 
 ## 与 OPL Cloud 的关系
 
-OPL Health Review 使用 OPL Ledger 记录任务回执、来源、审查结果和继续入口。医学专业判断由医院指定的专家、科室或平台负责人确认。
+OPL Health Review 描述医疗用户需要的记录和审查结果。OPL Ledger 等 owner surface 可以承载相应引用和回执，但 Health 不拥有其存储、运行状态或 receipt authority；医学专业判断仍由医院指定的专家、科室或负责人确认。

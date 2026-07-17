@@ -1,5 +1,10 @@
 # 场景地图
 
+Owner: `opl-health-platform`
+Purpose: `scenario_portfolio_map`
+State: `active_planning`
+Machine boundary: 本文比较候选医疗场景，不选择真实试点 owner，也不证明场景已实现、已部署、可运行或通过临床验收。
+
 OPL Health Platform 的场景规划先覆盖三类代表需求：专病科研、专病质控、随访管理。
 
 这三类场景可以压测平台最核心的能力：医学知识、临床规则、医疗工具、智能体流程、人工确认、审查记录和交付物。

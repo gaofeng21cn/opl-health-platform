@@ -1,5 +1,10 @@
 # 专病科研助手
 
+Owner: `opl-health-platform`
+Purpose: `specialty_research_scenario_reference`
+State: `candidate_first_pilot`
+Machine boundary: 本文是第一试点建议，不代表专病、科室 owner、资料边界、实现、运行、交付或验收已经确定。
+
 专病科研助手是 OPL Health Platform 的第一试点建议场景。
 
 它面向医生、研究者和科室科研团队，帮助他们围绕一个专病方向完成文献证据、研究问题、变量定义、分析计划、图表报告和论文材料的持续推进。

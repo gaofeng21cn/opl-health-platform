@@ -1,5 +1,10 @@
 # 随访管理助手
 
+Owner: `opl-health-platform`
+Purpose: `follow_up_scenario_reference`
+State: `deferred_scenario`
+Machine boundary: 本文是高风险后置场景参考，不授权患者触达、临床处理、数据使用、部署或运行，也不表示该场景已被选为试点。
+
 随访管理助手面向医生、护士和患者管理团队，帮助他们制定随访计划、整理随访记录、识别需要人工关注的情况，并生成阶段总结。
 
 这个场景商业价值高，但涉及患者触达、医疗责任、隐私和风险提示，适合作为后置规划。

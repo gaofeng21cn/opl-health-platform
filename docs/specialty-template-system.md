@@ -1,5 +1,10 @@
 # 专病模板体系
 
+Owner: `opl-health-platform`
+Purpose: `specialty_template_requirements_ssot`
+State: `active_planning`
+Machine boundary: 本文定义专病模板的人读结构和审查要求，不拥有智能体运行时、模板编译、交付物 authority 或 ready 结论。
+
 专病模板把医学知识、临床规则、医疗工具、审查要求和交付格式组织成高频任务入口。
 
 它是 OPL Health Platform 从平台能力走向科室应用的关键形态。

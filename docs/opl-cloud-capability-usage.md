@@ -1,11 +1,16 @@
 # OPL Cloud 通用能力使用方式
 
+Owner: `opl-health-platform`
+Purpose: `cloud_capability_consumption_boundary`
+State: `active_planning`
+Machine boundary: 本文只描述 Health 对 OPL Cloud、App 与 Framework 的产品需求和消费边界，不复制其机器合同、运行状态、账单、调度或 owner receipt。
+
 OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 
 这份文档归 OPL Health Platform 所有，用来说明医疗产品如何使用 Cloud 能力。OPL Cloud 只需要提供通用工作空间、管理、模型接入、资源、证据和智能体生命周期能力。
 
 本仓只记录 Health 对这些能力的产品化需求和引用关系。当前边界只落在人读产品和架构
-文档中：Workspace、Console、Gateway、Fabric、Ledger 和 Agent Registry 的运行真相、
+文档中：Workspace、Console、Gateway、Fabric、Ledger 和 OPL Packages 的运行真相、
 调度、账单、模型路由、证据存储和 owner receipt 不在本仓生成。机器可读合同应等试点形成
 重复结构后再抽取。
 
@@ -18,7 +23,7 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 | 医疗智能体调用前沿 AI | OPL Gateway | 医院可用模型、科室额度、任务用量和敏感任务策略 |
 | 医疗资料、工具、计算和环境接入 | OPL Fabric | 医学知识、临床规则、工具包和院内资源如何映射到通用资源 |
 | 医疗任务保留来源、审查和交付记录 | OPL Ledger | 医疗用户需要读懂哪些回执、审查结果和继续入口 |
-| 医疗智能体从设计走向部署 | OPL Agent Registry | 医疗智能体包如何绑定知识、规则、工具、审查和责任边界 |
+| 医疗智能体从设计走向产品入口 | OPL Packages（由 OPL Framework 持有）与对应 Cloud / App 产品面 | 医疗智能体需求如何绑定知识、规则、工具、审查和责任边界 |
 
 ## 第一试点的使用方式
 
@@ -65,11 +70,11 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 ### 医疗智能体部署方式
 
 ```text
-OMA 设计医疗智能体
+OMA 支持医疗智能体语义设计
 -> 绑定 Health Knowledge / Protocol / Tools / Review
--> 形成医疗智能体包
+-> 形成由对应 owner 验证的医疗智能体 package 引用
 -> 管理端审批
--> Cloud 通用能力承载实例
+-> 对应 Cloud / App / Framework owner 提供产品或运行面
 -> Workspace 使用
 -> Ledger 留证
 ```

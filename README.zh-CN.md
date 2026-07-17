@@ -109,34 +109,18 @@ Powered by OPL Cloud
 ├─ OPL Gateway    模型接入、密钥、路由、用量
 ├─ OPL Workspace  在线工作空间和任务会话
 ├─ OPL Console    用户、权限、资源、账单、审计
-├─ OPL Fabric     计算、存储、环境、连接器、智能体注册
+├─ OPL Fabric     计算、存储、环境、连接器
 └─ OPL Ledger     任务回执、产物来源、审查记录、继续引用
 ```
 
 OPL Cloud 负责通用能力。OPL Health Platform 负责医疗行业能力和医院产品体验。
 
-## 初步文档
+## 文档
 
+- [文档索引](docs/README.md)
+- [当前路线图与差距](docs/roadmap.md)
 - [产品定位](docs/product-positioning.md)
-- [目标运营模型](docs/target-operating-model.md)
-- [架构总览](docs/architecture.md)
-- [OPL Cloud 通用能力使用方式](docs/opl-cloud-capability-usage.md)
 - [场景地图](docs/scenario-map.md)
-- [专病科研助手](docs/scenarios/specialty-research-assistant.md)
-- [专病质控助手](docs/scenarios/specialty-quality-assistant.md)
-- [随访管理助手](docs/scenarios/follow-up-assistant.md)
-- [医疗能力包](docs/medical-capability-packs.md)
-- [OPL Health Knowledge](docs/opl-health-knowledge.md)
-- [OPL Health Protocol](docs/opl-health-protocol.md)
-- [OPL Health Tools](docs/opl-health-tools.md)
-- [OPL Health Agents](docs/opl-health-agents.md)
-- [OPL Health Review](docs/opl-health-review.md)
-- [OPL Health Deployment](docs/opl-health-deployment.md)
-- [专病模板体系](docs/specialty-template-system.md)
-- [医疗智能体生命周期](docs/medical-agent-lifecycle.md)
-- [医院部署模式](docs/hospital-deployment-models.md)
-- [合规与责任边界](docs/compliance-and-responsibility.md)
-- [路线图](docs/roadmap.md)
 
 ## 当前状态
 
