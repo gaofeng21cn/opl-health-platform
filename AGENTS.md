@@ -1,7 +1,5 @@
 # OPL Health Platform Repository Guide
 
-你始终用中文回复。
-
 本仓库承载 **OPL Health Platform / OPL 医疗智能平台** 的产品定位、行业能力规划、医学能力包、医院部署方案和公开说明。
 
 ## 边界
