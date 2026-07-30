@@ -23,7 +23,7 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 | 医疗智能体调用前沿 AI | OPL Gateway | 医院可用模型、科室额度、任务用量和敏感任务策略 |
 | 医疗资料、工具、计算和环境接入 | OPL Fabric | 医学知识、临床规则、工具包和院内资源如何映射到通用资源 |
 | 医疗任务保留来源、审查和交付记录 | OPL Ledger | 医疗用户需要读懂哪些回执、审查结果和继续入口 |
-| 医疗智能体从设计走向产品入口 | OPL Packages（由 OPL Framework 持有）与对应 Cloud / App 产品面 | 医疗智能体需求如何绑定知识、规则、工具、审查和责任边界 |
+| 医疗智能体从设计走向产品入口 | Package owner descriptor、配置的原生 carrier、Framework 通用聚合与对应 Cloud / App 产品面 | 医疗智能体需求如何绑定知识、规则、工具、审查和责任边界；Health 不接管 identity、publication、物理 lifecycle 或 installed truth |
 
 ## 第一试点的使用方式
 

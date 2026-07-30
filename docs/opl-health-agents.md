@@ -51,4 +51,4 @@ OPL Health Agents 是 OPL Health Platform 的医疗智能体能力层。
 
 ## 与 OPL Cloud 的关系
 
-Health 定义医疗智能体的产品需求、能力绑定和责任边界。OPL Packages（由 OPL Framework 持有）承载通用 package identity 与生命周期；OPL Cloud、App 和领域 owner 只按各自边界消费确切引用、提供产品或运行面。Health 不创建第二套 package registry、package lock、任务账本或发布状态。
+Health 定义医疗智能体的产品需求、能力绑定和责任边界。每个 Package owner 通过 descriptor 持有 identity、capability、dependency intent 与 publication；配置的原生 carrier 持有 install、update、remove 和物理 installed readback。OPL Framework 只负责通用 discovery、carrier action 委托、presence/callability 与 installed aggregation，Cloud、App 和领域 owner 按各自边界消费确切引用并提供产品或运行面。Health 不创建第二套 package registry、package lock、lifecycle manager、任务账本或发布状态。
