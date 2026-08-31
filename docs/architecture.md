@@ -3,7 +3,7 @@
 Owner: `opl-health-platform`
 Purpose: `health_industry_architecture`
 State: `active_planning`
-Machine boundary: 本文只定义 Health 医疗行业层的人读架构边界，不拥有 Cloud、App、Framework、runtime、deployment 或 release truth。
+Machine boundary: 本文只定义 Health 医疗行业层的人读架构边界，不负责声明 Cloud、App、Framework 的运行、部署或发布状态。
 
 OPL Health Platform 采用“医疗行业层 + OPL Cloud 通用底座”的结构。
 
@@ -22,11 +22,11 @@ OPL Health Platform
         │
         ▼
 OPL Cloud
-├─ Workspace / App
-├─ Console
-├─ Gateway
-├─ Fabric
-└─ Ledger
+├─ OPL Console / Control Plane
+├─ OPL Workspace / App 集成
+├─ OPL Gateway
+├─ OPL Fabric
+└─ OPL Ledger
 ```
 
 ## 能力分层
@@ -52,13 +52,25 @@ OPL Cloud
 
 它定义医院需要哪些医学知识、临床规则、医疗工具、专病模板、医疗智能体、审查机制和部署方案。
 
-当前阶段的边界只落在人读产品和架构文档中。本仓只记录医疗产品需求、能力包、审查策略、部署模型和 Cloud 能力引用关系；运行时、工作空间执行、资源调度、模型网关、账单、证据存储、发布 currentness 和 owner receipt 仍归各自实现面。机器可读合同应等试点形成重复结构后再抽取。
+当前阶段只维护产品和架构文档。本仓记录医疗产品需求、能力包、审查策略、部署模型和 Cloud 能力引用关系，不接管通用运行时、工作空间执行、资源调度、模型网关、账单、证据存储或发布状态。只有真实试点形成稳定、重复的结构后，才考虑抽取机器可读合同。
 
 **OPL Cloud 负责通用平台能力。**
 
-它提供工作空间、管理控制台、模型接入、资源连接、计量、任务回执和证据记录。
+它提供工作空间、管理控制台、模型接入、资源连接、计量、任务回执和证据能力。OPL Gateway 是稳定的模型接入产品抽象，本仓不记录或依赖它当前采用的具体实现。
 
-**OPL Framework 和 OMA 负责智能体构建基础。**
+### 已确定的技术边界
+
+| 边界 | OPL Cloud 负责什么 | OPL Health Platform 如何扩展 |
+| --- | --- | --- |
+| 账户与工作空间 | Console 提供界面，Control Plane 提供账户、策略和工作空间编排接口 | 定义医院、科室、项目和医疗角色需要的产品规则 |
+| 模型接入 | OPL Gateway 提供统一的模型接入、路由和用量能力 | 定义医疗场景允许使用的模型、额度和敏感任务策略 |
+| 资源与运行环境 | Fabric 通过统一边界管理计算、存储、环境、连接器和实际资源状态 | 定义医学资料、医疗工具和院内资源的接入要求 |
+| 回执与来源 | Ledger 保存回执、对账证据和调用方提供的来源引用 | Health 和医院持有医学审查规则、审查结果和继续授权 |
+| 服务协作 | Control Plane、Fabric 和 Ledger 是独立服务，通过类型明确的 HTTP 接口协作，并分别管理自己的 PostgreSQL 数据 | 医疗层只通过公开接口消费能力，不跨服务写入数据，也不复制通用状态 |
+
+OPL Cloud 当前已达到管理员运营下基本可用的阶段，但这不等于公共测试版已经完成，也不证明医疗行业层或某个医院实例已经可用。Cloud 的源码能力、公开发布和实例运行状态分别以其对应负责人和证据为准，本仓只记录医疗产品需要依赖的稳定边界。
+
+**OPL Framework 和 OPL Meta Agent（OMA）负责智能体构建基础。**
 
 OMA 可用于设计、测试和改进医疗智能体；OPL Framework 负责长期任务、阶段推进、文件、证据和交付边界。
 

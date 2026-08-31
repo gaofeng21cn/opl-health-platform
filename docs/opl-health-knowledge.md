@@ -40,4 +40,4 @@ OPL Health Knowledge 服务于三类场景：
 
 ## 与 OPL Cloud 的关系
 
-知识包的文件、数据库或机构资料可以通过 OPL Fabric 接入，在 OPL Workspace 中使用，并由 OPL Ledger 记录任务引用和交付证据。
+知识包的文件、数据库或机构资料可以通过 OPL Fabric 接入，在 OPL Workspace 中使用。需要长期保留的任务回执和来源引用可以进入 OPL Ledger；知识内容、医学审查和适用性判断仍由 Health 与医院指定负责人持有。

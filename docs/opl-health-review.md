@@ -51,4 +51,4 @@ OPL Health Review 是 OPL Health Platform 的医学审查与证据能力层。
 
 ## 与 OPL Cloud 的关系
 
-OPL Health Review 描述医疗用户需要的记录和审查结果。OPL Ledger 等 owner surface 可以承载相应引用和回执，但 Health 不拥有其存储、运行状态或 receipt authority；医学专业判断仍由医院指定的专家、科室或负责人确认。
+OPL Health Review 描述医疗用户需要的审查记录、决定和责任边界。OPL Ledger 可以保存相应回执和由业务方提供的来源引用，但不负责医学审查规则、审查结论或后续工作授权。医学专业判断仍由医院指定的专家、科室或负责人确认。

@@ -88,6 +88,7 @@ OPL Health Review 重点检查：
 ## 与 OPL Cloud 的关系
 
 - OPL Fabric 需要支持院内数据或报表系统的受控接入。
-- OPL Console 需要管理科室权限和指标审批。
-- OPL Ledger 需要记录数据来源、计算口径、图表和审查结果。
+- OPL Console / Control Plane 提供通用账户和工作空间策略；科室权限与指标审批是 Health 需要扩展和验证的能力。
+- OPL Ledger 保存必要的任务回执和来源引用，不持有指标口径、质控结论或审查决定。
+- OPL Health Review 与医院质控负责人持有指标口径、人工复核和质控结论。
 - OPL Workspace 展示指标、异常解释、报告草案和审查反馈。

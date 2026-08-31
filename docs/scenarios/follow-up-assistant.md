@@ -87,7 +87,8 @@ OPL Health Review 重点检查：
 
 ## 与 OPL Cloud 的关系
 
-- OPL Console 需要支持更严格的权限、审计和人工确认策略。
+- OPL Console / Control Plane 提供通用账户和工作空间策略；患者触达所需的严格权限、审计和人工确认是 Health 需要扩展和验证的能力。
 - OPL Fabric 需要支持随访系统、患者管理工具和消息通道的受控接入。
-- OPL Ledger 需要记录触达边界、人工确认和异常升级记录。
+- OPL Ledger 保存必要的任务回执和来源引用，不持有患者触达授权、人工确认或异常升级决定。
+- OPL Health Review 与医院指定负责人持有患者触达边界、人工确认和异常升级记录。
 - OPL Workspace 展示随访计划、异常清单和总结材料。

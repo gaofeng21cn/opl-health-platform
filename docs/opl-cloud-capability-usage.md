@@ -3,37 +3,43 @@
 Owner: `opl-health-platform`
 Purpose: `cloud_capability_consumption_boundary`
 State: `active_planning`
-Machine boundary: 本文只描述 Health 对 OPL Cloud、App 与 Framework 的产品需求和消费边界，不复制其机器合同、运行状态、账单、调度或 owner receipt。
+Machine boundary: 本文只描述 Health 对 OPL Cloud、App 与 Framework 的产品需求和使用边界，不复制其机器合同、运行状态、账单、调度或负责人回执。
 
 OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 
-这份文档归 OPL Health Platform 所有，用来说明医疗产品如何使用 Cloud 能力。OPL Cloud 只需要提供通用工作空间、管理、模型接入、资源、证据和智能体生命周期能力。
+这份文档归 OPL Health Platform 所有，用来说明医疗产品如何使用 Cloud 能力。OPL Cloud 保持通用工作空间、管理、模型接入、资源和证据边界；医疗产品在这些边界之上增加医院角色、医学内容、审查规则和场景体验。
 
-本仓只记录 Health 对这些能力的产品化需求和引用关系。当前边界只落在人读产品和架构
-文档中：Workspace、Console、Gateway、Fabric、Ledger 和 OPL Packages 的运行真相、
-调度、账单、模型路由、证据存储和 owner receipt 不在本仓生成。机器可读合同应等试点形成
-重复结构后再抽取。
+本仓只记录医疗产品对这些能力的需求和引用关系。Workspace、Console、Gateway、Fabric、Ledger 和 OPL Packages 的运行状态、调度、账单、模型路由、证据存储和负责人回执仍由各自实现面负责。只有真实试点形成稳定、重复的结构后，才考虑抽取机器可读合同。
+
+## 已确定的 Cloud 基线
+
+- 医疗平台确定建立在 OPL Cloud 之上，不再另选或自建一套通用云底座。
+- Console 负责界面，Control Plane 负责账户、策略和工作空间编排；医疗层通过产品接口接入，不直接访问 Fabric、Ledger 或其数据库。
+- OPL Gateway 是稳定的模型接入抽象；医疗层只依赖其公开能力，不绑定当前具体实现。
+- Fabric 负责计算、存储、环境、连接器和资源状态，具体部署由明确选择的 Provider 配置决定。
+- Ledger 负责回执、对账证据和来源引用，不负责医学审查结论、继续授权或医疗质量判断。
+- OPL Cloud 已达到管理员运营下基本可用的阶段，但医院组织、多角色协作、医疗系统接入和医疗审查流程仍是 Health 试点需要验证的扩展能力。
 
 ## 能力映射
 
 | Health 需求 | 使用的 Cloud 通用能力 | Health 侧需要想清楚 |
 | --- | --- | --- |
 | 医生和研究者在线使用医疗智能体 | OPL Workspace | 医疗项目空间展示什么、用户如何进入、任务如何组织 |
-| 医院管理用户、科室、审批和预算 | OPL Console | 医院角色、科室结构、审批对象、审查人和预算口径 |
+| 医院管理用户、科室、审批和预算 | OPL Console / Control Plane | 医院角色、科室结构、审批对象、审查人和预算口径；这些医疗组织能力不能假定已经存在 |
 | 医疗智能体调用前沿 AI | OPL Gateway | 医院可用模型、科室额度、任务用量和敏感任务策略 |
 | 医疗资料、工具、计算和环境接入 | OPL Fabric | 医学知识、临床规则、工具包和院内资源如何映射到通用资源 |
-| 医疗任务保留来源、审查和交付记录 | OPL Ledger | 医疗用户需要读懂哪些回执、审查结果和继续入口 |
-| 医疗智能体从设计走向产品入口 | Package owner descriptor、配置的原生 carrier、Framework 通用聚合与对应 Cloud / App 产品面 | 医疗智能体需求如何绑定知识、规则、工具、审查和责任边界；Health 不接管 identity、publication、物理 lifecycle 或 installed truth |
+| 医疗任务保留来源和交付证据 | OPL Ledger | 哪些回执和来源引用进入 Ledger；医学审查结果和继续权限由谁持有 |
+| 医疗智能体从设计走向产品入口 | 能力包负责人发布的描述信息、原生载体、OPL Framework 和相应的 Cloud / App 产品面 | 医疗智能体如何绑定知识、规则、工具、审查和责任边界；Health 不接管能力包身份、发布、安装或更新状态 |
 
 ## 第一试点的使用方式
 
 专病科研助手优先使用这些 Cloud 能力：
 
-- OPL Workspace：承载科研项目、任务会话、资料、产物和审查反馈。
-- OPL Gateway：提供模型能力，并按医院、科室、项目或任务记录用量。
+- OPL Workspace：提供科研项目的在线工作入口；医疗项目结构、资料组织和审查反馈是 Health 需要设计的扩展体验。
+- OPL Gateway：提供模型接入和用量能力；医院、科室、项目与任务之间的归属规则由试点明确。
 - OPL Fabric：接入文献、项目资料库、统计工具、图表工具和报告工具。
-- OPL Ledger：记录输入来源、智能体步骤、工具调用、产物和审查结果。
-- OPL Console：管理科室成员、权限、资源包、预算和试点工作空间。
+- OPL Ledger：保存需要长期保留的任务回执、对账证据和来源引用。
+- OPL Console / Control Plane：提供现有账户和工作空间管理能力；科室成员、医疗角色、审批和预算规则属于试点需要验证的扩展需求。
 
 ## Health 侧需要继续明确的问题
 
@@ -55,11 +61,11 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 - 哪些资源由医院提供，哪些资源由 OPL 托管。
 - 医疗用户看到的是产品化选项，而不是底层基础设施。
 
-### Ledger 留证方式
+### Ledger 与医学审查的衔接
 
-- 医疗用户需要读懂的任务记录长什么样。
-- 哪些输入、工具调用、产物和审查结果需要保留。
-- 审查意见和继续入口如何跟产物放在一起。
+- 哪些任务回执和来源引用需要进入 Ledger。
+- 医学审查记录由哪个医疗业务负责人或系统持有。
+- 审查记录如何引用 Ledger 回执，而不把医学决定交给通用证据服务。
 
 ### Gateway 用量方式
 
@@ -70,13 +76,13 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 ### 医疗智能体部署方式
 
 ```text
-OMA 支持医疗智能体语义设计
+OPL Meta Agent 支持医疗智能体语义设计
 -> 绑定 Health Knowledge / Protocol / Tools / Review
--> 形成由对应 owner 验证的医疗智能体 package 引用
+-> 形成由对应负责人验证的医疗智能体能力包引用
 -> 管理端审批
--> 对应 Cloud / App / Framework owner 提供产品或运行面
+-> 对应 OPL Cloud / OPL App / OPL Framework 负责人提供产品或运行面
 -> Workspace 使用
--> Ledger 留证
+-> 医疗业务保存审查决定，Ledger 保存对应回执和来源引用
 ```
 
 这些问题由 OPL Health Platform 继续规划；OPL Cloud 保持通用能力边界。

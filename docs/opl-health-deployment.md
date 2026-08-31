@@ -3,13 +3,26 @@
 Owner: `opl-health-platform`
 Purpose: `hospital_deployment_planning_ssot`
 State: `active_planning`
-Machine boundary: 本文定义医院部署需求和试点规划，不证明任何环境已部署、可用、安全合规或通过验收。通用基础设施、服务状态和运行证据归对应 OPL Cloud、App、Framework、医院系统及其 owner。
+Machine boundary: 本文定义医院部署需求和试点规划，不证明任何环境已部署、可用、安全合规或通过验收。通用基础设施、服务状态和运行证据归对应 OPL Cloud、App、Framework、医院系统及其负责人。
 
 OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 
 它面向医院的信息化、安全、权限、数据和计算资源条件，规划院内私有化、专有云、混合部署和科室试点路径。
 
-## 部署形态
+## 当前可依赖的技术路径
+
+OPL Health Platform 不另建部署系统，而是沿用 OPL Cloud 的可移植安装和实例边界：Cloud 发布通用产品，具体实例负责选择 Provider、配置工作空间域名和镜像，并完成部署、回滚与验收。
+
+| Cloud 路径 | 当前定位 | 医疗试点需要补充什么 |
+| --- | --- | --- |
+| `local-docker` | 面向受支持 Linux 主机的本地工作空间路径 | 医院主机、存储、网络、安全和运维条件 |
+| `tencent-tke` | 当前已有的云端 Provider 适配路径 | 实例级资源配置、网络边界、密钥管理和医院验收 |
+
+Provider、工作空间镜像和域名必须由部署实例明确配置，不能由 Health 文档假定默认值。其他 Kubernetes、虚拟机、GPU 或高性能计算形态只有在真实医院需求出现，并由 Fabric 增加相应适配和验证后，才能写成可用能力。
+
+## 目标部署形态
+
+下表描述医疗产品希望覆盖的部署目标，不代表当前 OPL Cloud 已经完成全部形态。
 
 | 模式 | 适用场景 | 特点 |
 | --- | --- | --- |
@@ -25,7 +38,8 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 - HIS、EMR、LIS、PACS。
 - 文献库、指南库和科研数据库。
 - 院内对象存储、文件系统或数据库。
-- Docker、虚拟机、GPU、高性能计算或托管工作节点。
+- 受支持的 Linux Docker 主机或已适配的云端工作节点。
+- 经真实需求和 Fabric 适配验证后的虚拟机、GPU 或高性能计算资源。
 
 ## 医院工作入口
 
@@ -45,8 +59,8 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 - 账号、权限和审计要求。
 - 试点场景和验收标准。
 
-每份试点方案还应明确医院 owner、科室 owner、数据责任人、人工审查人、退出条件和不进入本轮的系统范围。
+每份试点方案还应明确医院负责人、科室负责人、数据责任人、人工审查人、退出条件和不进入本轮的系统范围。
 
 ## 与 OPL Cloud 的关系
 
-OPL Cloud 提供通用工作空间、管理、模型接入、资源和证据能力；OPL Framework 与 App 保留其各自运行和产品 truth。OPL Health Deployment 只把可消费能力映射为医院部署需求，不复制底层实现或 ready 结论。
+OPL Cloud 提供通用工作空间、管理、模型接入、资源和证据能力；OPL Framework 与 OPL App 继续负责各自的运行和产品状态。OPL Health Deployment 只把这些能力映射为医院部署需求，不复制底层实现，也不把规划中的部署形态表述成已经可用。

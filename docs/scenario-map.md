@@ -24,7 +24,7 @@ OPL Health Platform 的场景规划先覆盖三类代表需求：专病科研、
 - 临床决策风险相对可控。
 - 对医学知识、文献证据、变量口径和报告交付要求明确。
 - 能体现 OPL 的长任务、证据链、产物交付和审查优势。
-- 可以复用 MAS、OPL App、OPL Workspace 和 Ledger 的已有方向。
+- 可以复用 MAS、OPL App、OPL Workspace 以及 OPL Cloud 的回执与来源能力，同时把医学审查决定保留在 Health 和医院责任边界内。
 - 科室容易用真实科研项目验证价值。
 
 ## 场景评估维度

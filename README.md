@@ -40,7 +40,8 @@ specialty workflows, tool use, review records, and deliverable outputs:
 
 **OPL Health Platform is built as that medical meta-agent platform for hospitals.**
 
-It turns OPL Cloud's general AI infrastructure into a healthcare product layer:
+It uses OPL Cloud as the established technical substrate and extends its general
+AI infrastructure into a healthcare product layer:
 medical knowledge packs, clinical rule packs, medical tool packs, specialty
 templates, medical reviewer gates, and hospital deployment models on top of a
 shared workspace, console, resource substrate, and evidence record.
@@ -58,32 +59,29 @@ OPL Health Platform is the healthcare product-line entry for OPL.
 | Scenario products | **OPL Health Apps** | Specialty agents, research assistants, quality assistants, follow-up assistants, management assistants |
 | Technical substrate | **Powered by OPL Cloud** | Workspace, console, resources, model access, metering, and evidence capabilities |
 
-The first phase defines the platform, boundaries, capability packs, and minimum
-delivery path. Studio, Connect, and Apps can become separate product surfaces as
-real hospital scenarios mature.
+The first phase starts from one real specialty scenario and validates the
+medical capability packs, human review boundary, and hospital deployment path.
+Studio, Connect, and Apps can become separate product surfaces as real hospital
+needs mature.
 
-The repository boundary is intentionally thin in this phase and stays in
-human-readable product and architecture documents. Health owns medical product
-requirements, capability packs, review policy, and deployment models; it
-consumes OPL Cloud / App / Framework refs and receipts without owning runtime,
-resource scheduling, billing, model access, evidence storage, release
-currentness, or clinical decision authority. Machine-readable contracts should
-wait until repeated pilot structures prove they are needed.
+OPL Cloud's technical direction is established and has reached a basically
+usable, administrator-operated stage. This repository owns healthcare product
+requirements, capability packs, review policy, and deployment models. It does
+not duplicate the generic runtime, resource scheduler, billing, model-access,
+evidence-storage, or release mechanisms. Medical judgment and clinical
+responsibility remain with the hospital and its designated professionals.
 
-## Public Role And MVP Boundary
+## Current Build Boundary
 
-This repository is the healthcare industry-layer planning surface for OPL
-Health Platform. The current phase is docs-only and MVP-first: it defines
-medical product positioning, capability packs, hospital deployment models,
-review boundaries, and how Health consumes OPL Cloud / App / Framework
-capabilities.
+This repository currently contains product and architecture documentation. Its
+next step is one specialty MVP pilot that defines the scenario, minimum
+knowledge and rules, required tools, human review points, responsibility
+boundaries, and the OPL Cloud, OPL App, and OPL Framework capabilities it uses.
 
-Do not add contracts, service code, runtime implementation, billing ownership,
-clinical-decision authority, or release/currentness claims here in this phase.
-The next concrete product step is a disease-specific MVP pilot document that
-defines one specialty scenario, minimum knowledge/protocol/tool/review packs,
-human responsibility boundaries, and the Cloud/App/Framework refs it will
-consume.
+The healthcare platform has not entered service implementation or hospital
+deployment. This phase does not add a second cloud service, billing system,
+resource scheduler, or evidence system, and it does not present design
+documents as released, deployed, or medically accepted product capability.
 
 <p align="center">
   <img src="assets/branding/opl-health-platform-overview-v2.png" alt="OPL Health Platform specialty MVP product vision" width="100%" />
@@ -118,7 +116,7 @@ Input provenance, execution traces, tool calls, reviewer results, owners, and
 continuation entries for important tasks.
 
 **OPL Health Deployment**<br/>
-Private, dedicated, and hybrid deployments aligned with hospital security,
+Private, dedicated, and hybrid deployment paths aligned with hospital security,
 permissions, data, and compute boundaries.
 
 ## Relationship With OPL Cloud
@@ -138,13 +136,15 @@ OPL Health Platform
 Powered by OPL Cloud
 ├─ OPL Gateway    model access, keys, routing, usage
 ├─ OPL Workspace  online workspaces and task sessions
-├─ OPL Console    users, permissions, resources, billing, audit
+├─ OPL Console    accounts, workspaces, quotas, administration
 ├─ OPL Fabric     compute, storage, environments, connectors
-└─ OPL Ledger     job receipts, artifact provenance, review records, continuation refs
+└─ OPL Ledger     receipts, reconciliation evidence, provenance refs
 ```
 
 OPL Cloud provides the generic substrate. OPL Health Platform provides the
-medical industry layer and hospital product experience.
+medical industry layer, medical review policy, and hospital product experience.
+Ledger can retain caller-provided receipts and provenance references, but it
+does not own medical conclusions, review decisions, or continuation authority.
 
 ## Documentation
 
@@ -155,11 +155,11 @@ medical industry layer and hospital product experience.
 
 ## Current Status
 
-This repository currently contains product planning, architecture boundaries,
-and healthcare capability design. Service code, runtime environments, billing,
-resource scheduling, model access, and evidence storage live in their owning
-implementation surfaces.
+OPL Cloud is the established technical substrate and has reached a basically
+usable, administrator-operated stage. That does not mean the healthcare layer
+is implemented or that a hospital production deployment has been accepted.
 
-The first phase is to make the brand, boundary, capability packs, deployment
-path, and relationship with OPL Cloud explicit before pilots and implementation
-work begin.
+This repository currently contains healthcare product planning, architecture
+boundaries, and capability design. The next step is to select one specialty
+research scenario, produce a reviewable pilot plan, and then enter implementation
+and hospital validation only when its real requirements are known.

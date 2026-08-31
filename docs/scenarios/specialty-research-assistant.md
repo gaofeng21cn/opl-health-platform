@@ -95,5 +95,6 @@ OPL Health Review 重点检查：
 - OPL Workspace 提供科研任务工作空间。
 - OPL Gateway 提供模型能力和用量记录。
 - OPL Fabric 接入文献、资料库、统计和报告工具。
-- OPL Ledger 记录任务过程、输入来源、产物和审查结果。
-- OPL Console 管理科室成员、权限、工作空间和试点资源。
+- OPL Ledger 保存需要长期保留的任务回执、对账证据和来源引用。
+- OPL Health Review 与医院指定负责人持有医学审查记录、审查决定和继续权限。
+- OPL Console / Control Plane 提供现有账户和工作空间管理；科室成员、医疗角色、审批和试点预算属于需要验证的 Health 扩展需求。

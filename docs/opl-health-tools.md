@@ -40,4 +40,4 @@ OPL Health Tools 是 OPL Health Platform 的医疗工具能力层。
 
 ## 与 OPL Cloud 的关系
 
-OPL Health Tools 通过 OPL Fabric 的连接器和执行适配器进入工作空间。OPL Console 管理授权策略，OPL Ledger 记录关键调用和产物来源。
+OPL Health Tools 通过 OPL Fabric 的连接器和执行适配器进入工作空间。Health 定义医院和医疗场景需要的授权规则，OPL Console / Control Plane 提供通用账户与工作空间策略，实际数据源和连接器继续由各自负责人控制。OPL Ledger 只保存必要的调用回执和来源引用，不持有医疗授权决定或审查结论。

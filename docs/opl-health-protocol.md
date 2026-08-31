@@ -40,4 +40,4 @@ OPL Health Protocol 是 OPL Health Platform 的临床规则能力层。
 
 ## 与 OPL Cloud 的关系
 
-规则包是医疗智能体产品需求的一部分。其可消费引用由对应 package、领域和平台 owner 管理；Workspace 或其他产品面可以展示 owner 提供的结果与引用，Ledger 等证据面可以记录相应回执。Health 不创建第二套 package registry、运行状态或 receipt authority。
+规则包是医疗智能体产品需求的一部分。其可使用的版本和引用由相应能力包、领域和平台负责人管理；Workspace 或其他产品面可以展示负责人提供的结果与引用，Ledger 可以保存相应回执。Health 不创建第二套能力包注册与发布系统、运行状态或回执管理机制。
