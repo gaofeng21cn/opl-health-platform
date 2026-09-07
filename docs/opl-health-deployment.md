@@ -9,16 +9,15 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 
 它面向医院的信息化、安全、权限、数据和计算资源条件，规划院内私有化、专有云、混合部署和科室试点路径。
 
-## 当前可依赖的技术路径
+## 实例选择边界
 
 OPL Health Platform 不另建部署系统，而是沿用 OPL Cloud 的可移植安装和实例边界：Cloud 发布通用产品，具体实例负责选择 Provider、配置工作空间域名和镜像，并完成部署、回滚与验收。
 
-| Cloud 路径 | 当前定位 | 医疗试点需要补充什么 |
-| --- | --- | --- |
-| `local-docker` | 面向受支持 Linux 主机的本地工作空间路径 | 医院主机、存储、网络、安全和运维条件 |
-| `tencent-tke` | 当前已有的云端 Provider 适配路径 | 实例级资源配置、网络边界、密钥管理和医院验收 |
-
-Provider、工作空间镜像和域名必须由部署实例明确配置，不能由 Health 文档假定默认值。其他 Kubernetes、虚拟机、GPU 或高性能计算形态只有在真实医院需求出现，并由 Fabric 增加相应适配和验证后，才能写成可用能力。
+Provider、工作空间镜像和域名由部署实例明确选择。可用 Provider 及前置条件以
+[Cloud 安装说明](https://github.com/gaofeng21cn/one-person-lab-cloud/blob/main/docs/installation.md)
+和实例的实际合同为准，本仓不另维护 Provider 白名单或部署默认值。
+医院须补充主机、存储、网络、密钥、隔离和运维要求；任何 Kubernetes、虚拟机、GPU 或
+高性能计算方案都须由对应 adapter 与实例验证后才能写成可用能力。
 
 ## 目标部署形态
 

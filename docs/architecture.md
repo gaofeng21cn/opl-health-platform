@@ -68,11 +68,15 @@ OPL Cloud
 | 回执与来源 | Ledger 保存回执、对账证据和调用方提供的来源引用 | Health 和医院持有医学审查规则、审查结果和继续授权 |
 | 服务协作 | Control Plane、Fabric 和 Ledger 是独立服务，通过类型明确的 HTTP 接口协作，并分别管理自己的 PostgreSQL 数据 | 医疗层只通过公开接口消费能力，不跨服务写入数据，也不复制通用状态 |
 
-OPL Cloud 当前已达到管理员运营下基本可用的阶段，但这不等于公共测试版已经完成，也不证明医疗行业层或某个医院实例已经可用。Cloud 的源码能力、公开发布和实例运行状态分别以其对应负责人和证据为准，本仓只记录医疗产品需要依赖的稳定边界。
+Cloud 的源码能力、公开发布和实例运行状态分别以其对应负责人和证据为准；
+本仓不保存跨仓可用性快照。医疗需求如何映射到公开平台能力见
+[Cloud 能力使用方式](opl-cloud-capability-usage.md)。
 
 **OPL Framework 和 OPL Meta Agent（OMA）负责智能体构建基础。**
 
-OMA 可用于设计、测试和改进医疗智能体；OPL Framework 负责长期任务、阶段推进、文件、证据和交付边界。
+OMA 可支持医疗智能体的语义设计、评估和改进。OPL Framework 持有通用 runtime、Package
+发现、carrier 委托和 installed aggregation；研究流程、医学质量判断、阶段与产物权威归
+相应领域实现和医院负责人，不能由 Framework 代为签发。
 
 ## 最小落地链路
 

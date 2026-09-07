@@ -38,7 +38,7 @@ specialty workflows, tool use, review records, and deliverable outputs:
 - AI teams need one governed way to develop, test, publish, and operate medical
   agents.
 
-**OPL Health Platform is built as that medical meta-agent platform for hospitals.**
+**OPL Health Platform is planned as that medical meta-agent platform for hospitals.**
 
 It uses OPL Cloud as the established technical substrate and extends its general
 AI infrastructure into a healthcare product layer:
@@ -64,8 +64,8 @@ medical capability packs, human review boundary, and hospital deployment path.
 Studio, Connect, and Apps can become separate product surfaces as real hospital
 needs mature.
 
-OPL Cloud's technical direction is established and has reached a basically
-usable, administrator-operated stage. This repository owns healthcare product
+OPL Cloud is the selected technical substrate. Its current operational state
+must be verified in the Cloud and deployment-instance repositories. This repository owns healthcare product
 requirements, capability packs, review policy, and deployment models. It does
 not duplicate the generic runtime, resource scheduler, billing, model-access,
 evidence-storage, or release mechanisms. Medical judgment and clinical
@@ -153,13 +153,5 @@ does not own medical conclusions, review decisions, or continuation authority.
 - [Product Positioning](docs/product-positioning.md)
 - [Scenario Map](docs/scenario-map.md)
 
-## Current Status
-
-OPL Cloud is the established technical substrate and has reached a basically
-usable, administrator-operated stage. That does not mean the healthcare layer
-is implemented or that a hospital production deployment has been accepted.
-
-This repository currently contains healthcare product planning, architecture
-boundaries, and capability design. The next step is to select one specialty
-research scenario, produce a reviewable pilot plan, and then enter implementation
-and hospital validation only when its real requirements are known.
+Current pilot selection, remaining gaps, and implementation entry conditions
+are maintained only in [Roadmap](docs/roadmap.md).

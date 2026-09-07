@@ -1,9 +1,9 @@
 # 路线图与当前差距
 
 Owner: `opl-health-platform`
-Purpose: `single_active_truth_plan`
+Purpose: `pilot_status_and_entry_conditions`
 State: `active_planning`
-Machine boundary: 本文只维护 Health 人读规划的当前状态、剩余差距和下一轮工作。它不证明服务、部署、运行、发布、临床质量或负责人验收；这些事实归对应实现、运行输出和负责人回执。
+Machine boundary: 本文只维护 Health 试点状态、待决定事项与进入实施的条件。它不证明服务、部署、运行、发布、临床质量或负责人验收；这些事实归对应实现、运行输出和负责人回执。
 
 ## 目标态
 
@@ -15,11 +15,8 @@ OPL Health Platform 以 OPL Cloud 为确定的技术底座，结合 OPL App、OP
 
 | 主题 | 当前状态 | 边界 |
 | --- | --- | --- |
-| 产品定位与目标运营模型 | `documented` | 已定义医院、科室、医生/研究者、信息化与 AI 团队角色；不是已上线产品证明 |
-| Health / Cloud 分工 | `documented` | Health 定义医疗产品需求；Cloud / App / Framework 保留各自机器与运行真相 |
-| OPL Cloud 技术底座 | `established` | Console、Control Plane、Gateway、Fabric、Ledger 和 Workspace 边界已经明确；Cloud 已达到管理员运营下基本可用阶段，但不等于医疗平台或医院实例已经可用 |
+| 产品与技术方向 | `defined` | 医疗行业层采用 OPL Cloud；角色和分工见对应主题文档，Cloud 当前能力与实例状态从其 owner 核验 |
 | 医疗行业扩展 | `not_implemented` | 医院组织、多角色协作、医疗系统接入、医学审查流程和专病体验仍需通过试点定义和验证 |
-| 长期主题 owner | `consolidated` | Knowledge、Protocol、Tools、专病模板、Agents、Review、Deployment 各有一个人读 owner |
 | 场景地图 | `documented` | 专病科研为第一试点建议；质控与随访用于边界压测 |
 | 专病 MVP | `not_selected` | 尚未确定具体专病、科室 owner、资料边界和验收场景 |
 | 实现与运行证据 | `out_of_scope_for_current_phase` | 文档、设计和链接检查不证明真实部署、运行或医疗质量 |
@@ -30,7 +27,7 @@ OPL Health Platform 以 OPL Cloud 为确定的技术底座，结合 OPL App、OP
 2. 新增一份专病试点文档，引用而不复制 Knowledge、Protocol、Tools、Review 与 Deployment 的主题文档。
 3. 明确试点所需的最小资料、规则、工具、输入输出、人工确认点、交付物和退出条件。
 4. 逐项区分可以直接使用的 OPL Cloud 能力和需要由 Health 扩展的医院组织、医疗接入、审查与产品体验，不把目标需求写成已经实现。
-5. 明确试点采用 `local-docker` 还是 `tencent-tke`，以及实例侧需要提供的域名、镜像、资源和验收条件。
+5. 依据当前 Cloud 和实例合同选择适合医院的 Provider、域名、镜像、资源和验收条件，不从旧文档推断可选范围。
 6. 由医疗、信息化和产品负责人审阅责任边界，再决定是否进入实现评估。
 
 ## 后续阶段
@@ -47,41 +44,11 @@ OPL Health Platform 以 OPL Cloud 为确定的技术底座，结合 OPL App、OP
 
 仅在真实场景成熟后，再评估 OPL Health Studio、OPL Health Connect 与 OPL Health Apps 是否需要独立产品面。
 
-## 下一轮工作说明
+## 进入实施的条件
 
-### 修改范围
+医院或科室负责人明确具体专病、用户、人群、资料范围、责任人和验收目标后，形成一份
+专病试点方案，引用已有能力、审查和部署主题。方案必须列明输入输出、人工确认、
+所选实例能力、交付要求和退出条件，并经医疗、信息化和产品负责人审阅。
 
-- `docs/scenarios/<selected-specialty>-research-mvp.md`
-- `docs/scenario-map.md`
-- `docs/roadmap.md`
-- 必要时仅更新被该试点直接引用的长期主题文档
-
-### 本轮不做
-
-- 不新增机器合同、数据结构、服务代码、运行时、账单、资源调度器或发布就绪声明。
-- 不复制 OPL Cloud、App、Framework、MAS 或其他领域仓的机器合同和实现说明。
-- 不把质控或随访场景一并扩成第二、第三条实施线。
-
-### 事实来源
-
-- 医院或科室负责人提供的具体专病、用户、人群、资料范围、责任人和验收目标。
-- 本仓 [文档索引](./README.md)、[场景地图](./scenario-map.md) 与各长期主题文档。
-- OPL Cloud、OPL App、OPL Framework 和领域仓当前公开边界及可使用的能力；必须重新读取权威来源，不从本仓旧描述推断。
-
-### 检查方式
-
-- 全仓 Markdown 相对链接扫描。
-- 被替代主题、旧路径和重复标题扫描。
-- `git diff --check`。
-
-### 完成标准
-
-- 只有一份专病试点主文档。
-- 专病、用户、输入、输出、能力引用、人工确认、责任边界和验收条件完整。
-- 未把缺少负责人证据的实现、部署、运行或质量状态写成已经完成。
-- 所有当前差距回写本文件，文档索引没有重复的主题负责人。
-
-### 回写位置
-
-- 当前状态、剩余差距和后续提示词折回 `docs/roadmap.md`。
-- 新增或移除入口只更新 `docs/README.md`；根 README 继续保持公开产品叙事。
+在这些条件满足前，不把候选场景写成已选定试点，不预建通用服务或扩大到多个实施场景。
+本文件仅随实际决策更新剩余差距；不积累会话提示词、完成日志、测试数量或外仓状态快照。
