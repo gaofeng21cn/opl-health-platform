@@ -14,7 +14,7 @@ OPL Health Deployment 是 OPL Health Platform 的医院部署能力层。
 OPL Health Platform 不另建部署系统，而是沿用 OPL Cloud 的可移植安装和实例边界：Cloud 发布通用产品，具体实例负责选择 Provider、配置工作空间域名和镜像，并完成部署、回滚与验收。
 
 Provider、工作空间镜像和域名由部署实例明确选择。可用 Provider 及前置条件以
-[Cloud 安装说明](https://github.com/gaofeng21cn/one-person-lab-cloud/blob/main/docs/installation.md)
+[Cloud 安装说明](https://github.com/gaofeng21cn/opl-cloud/blob/main/docs/installation.md)
 和实例的实际合同为准，本仓不另维护 Provider 白名单或部署默认值。
 医院须补充主机、存储、网络、密钥、隔离和运维要求；任何 Kubernetes、虚拟机、GPU 或
 高性能计算方案都须由对应 adapter 与实例验证后才能写成可用能力。

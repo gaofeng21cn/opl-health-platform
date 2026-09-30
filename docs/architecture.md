@@ -66,9 +66,10 @@ OPL Cloud
 | 模型接入 | OPL Gateway 提供统一的模型接入、路由和用量能力 | 定义医疗场景允许使用的模型、额度和敏感任务策略 |
 | 资源与运行环境 | Fabric 通过统一边界管理计算、存储、环境、连接器和实际资源状态 | 定义医学资料、医疗工具和院内资源的接入要求 |
 | 回执与来源 | Ledger 保存回执、对账证据和调用方提供的来源引用 | Health 和医院持有医学审查规则、审查结果和继续授权 |
-| 服务协作 | Control Plane、Fabric 和 Ledger 是独立服务，通过类型明确的 HTTP 接口协作，并分别管理自己的 PostgreSQL 数据 | 医疗层只通过公开接口消费能力，不跨服务写入数据，也不复制通用状态 |
+| 服务协作 | Cloud 持有通用服务边界、公开接口和数据 authority；具体拓扑与传输由其实现合同决定 | 医疗层只通过公开接口消费能力，不跨服务写入数据，也不复制通用状态 |
 
-Cloud 的源码能力、公开发布和实例运行状态分别以其对应负责人和证据为准；
+Cloud 的[当前实现架构](https://github.com/gaofeng21cn/opl-cloud/blob/main/docs/implementation-architecture.md)
+持有源码拓扑与保留路径；公开发布和实例运行状态分别以其发布负责人和 Instance 回执为准。
 本仓不保存跨仓可用性快照。医疗需求如何映射到公开平台能力见
 [Cloud 能力使用方式](opl-cloud-capability-usage.md)。
 
