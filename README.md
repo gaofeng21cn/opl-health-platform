@@ -78,6 +78,11 @@ next step is one specialty MVP pilot that defines the scenario, minimum
 knowledge and rules, required tools, human review points, responsibility
 boundaries, and the OPL Cloud, OPL App, and OPL Framework capabilities it uses.
 
+Agents and apps are designed to reuse authorized knowledge sources and service
+connections, with human review interfaces where the task needs them. Original
+systems retain medical records and credentials. The [architecture](docs/architecture.md)
+defines how the shared foundation supports this healthcare experience.
+
 The healthcare platform has not entered service implementation or hospital
 deployment. This phase does not add a second cloud service, billing system,
 resource scheduler, or evidence system, and it does not present design
