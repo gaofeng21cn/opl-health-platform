@@ -21,6 +21,11 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 - 医院组织、多角色协作、医疗系统接入和医学审查流程是 Health 试点需要验证的需求；
   对应 Cloud 版本和实例能力从其公开接口及运行结果核验，不在本仓保存可用性结论。
 
+Health 的 Cloud 试点应组合消费 Framework 的知识来源与 Connect 连接授权，原生 provider 继续持有
+凭证、存储和业务语义。Fabric 的资源接入与 Console 的工作空间权限不替代来源 grant、
+消费者 grant 或医疗批准；跨环境委派须在实际执行 owner 处验证。详细要求只在
+[医学知识](opl-health-knowledge.md)和[医疗工具](opl-health-tools.md)维护。
+
 ## 能力映射
 
 | Health 需求 | 使用的 Cloud 通用能力 | Health 侧需要想清楚 |
@@ -28,7 +33,7 @@ OPL Health Platform 建立在 OPL Cloud 的通用能力之上。
 | 医生和研究者在线使用医疗智能体 | OPL Workspace | 医疗项目空间展示什么、用户如何进入、任务如何组织 |
 | 医院管理用户、科室、审批和预算 | OPL Console / Control Plane | 医院角色、科室结构、审批对象、审查人和预算口径；这些医疗组织能力不能假定已经存在 |
 | 医疗智能体调用前沿 AI | OPL Gateway | 医院可用模型、科室额度、任务用量和敏感任务策略 |
-| 医疗资料、工具、计算和环境接入 | OPL Fabric | 医学知识、临床规则、工具包和院内资源如何映射到通用资源 |
+| 医疗资料、工具、计算和环境接入 | OPL Fabric 及其组合的知识、连接与原生 provider 公开能力 | 映射获准资源及消费者；明确知识来源绑定、连接 capability 和院内数据 owner |
 | 医疗任务保留来源和交付证据 | OPL Ledger | 哪些回执和来源引用进入 Ledger；医学审查结果和继续权限由谁持有 |
 | 医疗智能体从设计走向产品入口 | 能力包负责人发布的描述信息、原生载体、OPL Framework 和相应的 Cloud / App 产品面 | 医疗智能体如何绑定知识、规则、工具、审查和责任边界；Health 不接管能力包身份、发布、安装或更新状态 |
 

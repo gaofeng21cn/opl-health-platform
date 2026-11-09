@@ -49,6 +49,12 @@ OPL Health Agents 是 OPL Health Platform 的医疗智能体能力层。
 
 第一版只规划一个医疗智能体：选择明确专病场景，绑定最小 Knowledge、Protocol、Tools 与 Review 要求，使用固定案例接受专家审查，再由对应产品和运行 owner 决定是否进入工作空间试点。
 
+蓝图按[共用基座边界](architecture.md)列明必要与可选知识、连接能力、领域任务 owner 和人介入点。
+标准智能体、独立 Skill/工具与带 UI 的医疗应用共用这些要求，按实际入口接入已有能力。
+需要比较、编辑或批准时，优先复用宿主共享视图或合适的 MCP App，携带同一任务、产物及其版本，
+由领域 owner 回读人的决定；无需交互的能力直接返回结构化结果，不为满足形式另建页面。
+医院系统中的正式操作与专业审查继续使用其原生入口及责任边界。
+
 ## 与 OPL Cloud 的关系
 
 Health 定义医疗智能体的产品需求、能力绑定和责任边界。每个 Package owner 通过 descriptor 持有 identity、capability、dependency intent 与 publication；配置的原生 carrier 持有 install、update、remove 和物理 installed readback。OPL Framework 只负责通用 discovery、carrier action 委托、presence/callability 与 installed aggregation，Cloud、App 和领域 owner 按各自边界消费确切引用并提供产品或运行面。Health 不创建第二套 package registry、package lock、lifecycle manager、任务账本或发布状态。

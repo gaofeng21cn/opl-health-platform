@@ -79,6 +79,13 @@ OMA 可支持医疗智能体的语义设计、评估和改进。OPL Framework �
 发现、carrier 委托和 installed aggregation；研究流程、医学质量判断、阶段与产物权威归
 相应领域实现和医院负责人，不能由 Framework 代为签发。
 
+医疗 Agent 与 Agent 原生 App 共同遵循 Framework 的[Agent 原生应用标准](https://github.com/gaofeng21cn/one-person-lab/blob/main/docs/policies/agent-native-app-policy.md)。
+Cloud/Fabric/Workspace 在各自公开边界组合通用能力；知识来源绑定与接受版本复用
+Framework，连接引用与消费者授权复用 Connect，原库、原生 provider 和医院继续持有
+正文、凭证与医疗决定。具体消费要求分别归[医学知识](opl-health-knowledge.md)和
+[医疗工具](opl-health-tools.md)，不在 Health 内再建凭证库、个人记忆库或通用任务运行时。
+是否使用标准智能体载体或提供 UI 由任务需要决定；共同基座并不要求每个医疗能力有独立前端。
+
 ## 最小落地链路
 
 ```text
